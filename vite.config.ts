@@ -6,15 +6,13 @@ import { pioneer } from "@open-pioneer/vite-plugin-pioneer";
 import react from "@vitejs/plugin-react-swc";
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
-import eslint from "vite-plugin-eslint";
+// import eslint from "vite-plugin-eslint";
 
 // Minimum browser versions supported by generated JS/CSS
 // See also:
 // - https://vitejs.dev/config/build-options.html#build-target
 // - https://esbuild.github.io/api/#target
 const targets = ["chrome92", "edge92", "firefox91", "safari14"];
-
-const sampleSites = ["samples/map-sample", "samples/i18n-howto"];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -41,22 +39,19 @@ export default defineConfig(({ mode }) => {
 
         plugins: [
             pioneer({
-                // Whether to include src/index.html in the built output
+                // Whether to include src/index.html in the built output.
+                // In this project, we use the "main" html as an app overview.
                 rootSite: true,
 
                 // Additional directories to include as html (must contain index.html files)
-                sites: [
-                    "sites/empty",
-
-                    // Include sample sites in the build
-                    ...sampleSites
-                ],
+                sites: ["sites/workshop"],
 
                 // Apps to distribute as .js files for embedded use cases
                 apps: []
             }),
-            react(),
-            eslint()
+            react()
+            // Enable to show linting errors in vite and the browser during dev (has some performance impact)
+            //eslint()
         ],
 
         // Ignore irrelevant deprecations.

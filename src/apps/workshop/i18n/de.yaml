@@ -1,0 +1,8 @@
+messages:
+  map:
+    ariaLabel: "Karte. Mit den Pfeiltasten kannst du die Karte bewegen. Mit der Plus Taste hineinzoomen und mit der Minus Taste herauszoomen."
+    toolsAriaLabel: "Kartenwerkzeuge"
+    printMapInfoLabel: "Karteninformationen in der Konsole ausgeben"
+
+  collapseTool:
+    label: "Inhalt ein- oder ausblenden"

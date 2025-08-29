@@ -1,0 +1,8 @@
+messages:
+  map:
+    ariaLabel: "Map. Use the arrow keys to move the map. Zoom in with the plus button and zoom out with the minus button."
+    toolsAriaLabel: "Map tools"
+    printMapInfoLabel: "Output map information in console"
+
+  collapseTool:
+    label: "Toggle content"

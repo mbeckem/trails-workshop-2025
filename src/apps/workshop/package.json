@@ -1,0 +1,22 @@
+{
+    "name": "workshop-app",
+    "private": true,
+    "dependencies": {
+        "@chakra-ui/react": "catalog:",
+        "@conterra/reactivity-core": "catalog:",
+        "@open-pioneer/chakra-snippets": "catalog:",
+        "@open-pioneer/core": "catalog:",
+        "@open-pioneer/map-navigation": "catalog:",
+        "@open-pioneer/map-ui-components": "catalog:",
+        "@open-pioneer/map": "catalog:",
+        "@open-pioneer/notifier": "catalog:",
+        "@open-pioneer/react-utils": "catalog:",
+        "@open-pioneer/reactivity": "catalog:",
+        "@open-pioneer/runtime": "catalog:",
+        "@open-pioneer/scale-bar": "catalog:",
+        "@open-pioneer/scale-viewer": "catalog:",
+        "ol": "catalog:",
+        "react-icons": "catalog:",
+        "react": "catalog:"
+    }
+}
