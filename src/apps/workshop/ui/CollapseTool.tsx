@@ -10,6 +10,7 @@ export function CollapseWidget(props: { children?: ReactNode }) {
     const [isOpen, setIsOpen] = useState(false);
     const label = intl.formatMessage({ id: "collapseTool.label" });
 
+    // NOTE: Not ready for production usages, aria attributes are missing.
     return (
         <Box
             position="relative"
