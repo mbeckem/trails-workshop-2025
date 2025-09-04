@@ -7,6 +7,7 @@ import { useService } from "open-pioneer:react-hooks";
 import { AppModel } from "../AppModel";
 import { Header } from "./Header";
 import { MapContent } from "./MapContent";
+import { Footer } from "./Footer";
 
 export function AppUI() {
     const appModel = useService<AppModel>("workshop.AppModel");
@@ -19,12 +20,12 @@ export function AppUI() {
         <Flex height="100%" direction="column" overflow="hidden">
             <Notifier />
             <TitledSection>
-                <Header />
-
                 {/** Uses the specified map for all map-related widgets */}
                 {map && (
                     <DefaultMapProvider map={map}>
+                        <Header />
                         <MapContent />
+                        <Footer />
                     </DefaultMapProvider>
                 )}
             </TitledSection>

@@ -8,7 +8,6 @@ import { useIntl, useService } from "open-pioneer:react-hooks";
 import { LuAtom } from "react-icons/lu";
 import { AppModel } from "../AppModel";
 import { CollapseWidget } from "./CollapseTool";
-import { MapFooter } from "./MapFooter";
 
 export function MapContent() {
     const intl = useIntl();
@@ -58,7 +57,6 @@ export function MapContent() {
                     <ScaleBar />
                 </MapAnchor>
             </MapContainer>
-            <MapFooter />
         </Flex>
     );
 }

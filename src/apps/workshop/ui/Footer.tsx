@@ -4,7 +4,7 @@ import { ScaleViewer } from "@open-pioneer/scale-viewer";
 import { useService } from "open-pioneer:react-hooks";
 import { AppModel } from "../AppModel";
 
-export function MapFooter() {
+export function Footer() {
     const appModel = useService<AppModel>("workshop.AppModel");
     const map = useReactiveSnapshot(() => appModel.map, [appModel])!;
     const projection = useReactiveSnapshot(() => map.projection.getCode(), [map]);

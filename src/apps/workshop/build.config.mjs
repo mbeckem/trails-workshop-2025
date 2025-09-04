@@ -10,7 +10,9 @@ export default defineBuildConfig({
         AppModel: {
             provides: ["workshop.AppModel"],
             references: {
-                mapRegistry: "map.MapRegistry"
+                mapRegistry: "map.MapRegistry",
+                httpService: "http.HttpService",
+                notifier: "notifier.NotificationService"
             }
         }
     },

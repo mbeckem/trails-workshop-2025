@@ -6,6 +6,7 @@
         "@conterra/reactivity-core": "catalog:",
         "@open-pioneer/chakra-snippets": "catalog:",
         "@open-pioneer/core": "catalog:",
+        "@open-pioneer/http": "catalog:",
         "@open-pioneer/map-navigation": "catalog:",
         "@open-pioneer/map-ui-components": "catalog:",
         "@open-pioneer/map": "catalog:",
@@ -15,6 +16,7 @@
         "@open-pioneer/runtime": "catalog:",
         "@open-pioneer/scale-bar": "catalog:",
         "@open-pioneer/scale-viewer": "catalog:",
+        "@open-pioneer/search": "catalog:",
         "ol": "catalog:",
         "react-icons": "catalog:",
         "react": "catalog:"
