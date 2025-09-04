@@ -60,6 +60,9 @@ catalogs:
     '@open-pioneer/search':
       specifier: ^0.11.0
       version: 0.11.0
+    '@open-pioneer/toc':
+      specifier: ^0.11.0
+      version: 0.11.0
     '@open-pioneer/vite-plugin-pioneer':
       specifier: ^5.0.0
       version: 5.0.0
@@ -367,6 +370,9 @@ importers:
       '@open-pioneer/search':
         specifier: 'catalog:'
         version: 0.11.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(next-themes@0.4.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(typescript@5.9.2)
+      '@open-pioneer/toc':
+        specifier: 'catalog:'
+        version: 0.11.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(typescript@5.9.2)
       ol:
         specifier: 'catalog:'
         version: 10.6.1
@@ -798,6 +804,9 @@ packages:
   '@open-pioneer/base-theme@4.0.0':
     resolution: {integrity: sha512-G4D8ja28xvULyvcMa/hNhyhuskzSI6d9vjG3tDTqdpunflNrCoMjIA4VGFDZ8HwE4FFWWPxt47PivY8tdgw/Dw==}
 
+  '@open-pioneer/basemap-switcher@0.11.0':
+    resolution: {integrity: sha512-gCuZ0lB/d8riI78wmGfKbZFL2zhn5ly7rc5yl1rBAgmzZJtWHDeJ1U2upU7JovkV8gdt7fY82cJUIP/LvsknSQ==}
+
   '@open-pioneer/build-common@3.1.0':
     resolution: {integrity: sha512-YcLgVRW/Dn+FllZWWOap8bZC018/ehfp6Deslil4nFIfhhwIzuzIoQXgIFj11eSU2UBziQ5TQrNYEnj37skqbw==}
     engines: {node: '>= 20'}
@@ -866,6 +875,9 @@ packages:
 
   '@open-pioneer/search@0.11.0':
     resolution: {integrity: sha512-pI7UZ9KEnw4n3sjpWoqdsczDnmCndwec4ObM36zV5mDBWxE4QRMBUUeTIOwDAxXAeKe3GVxpazSITRPQcQ/tnQ==}
+
+  '@open-pioneer/toc@0.11.0':
+    resolution: {integrity: sha512-2qEC56KJEOcg9/BYOa0gTdOF9FC4ksq0TS7fVf07MHjRe+wW59sVrjm+CRwiiVVm8PrCLu7lLY/5daZaqbow6w==}
 
   '@open-pioneer/vite-plugin-pioneer@5.0.0':
     resolution: {integrity: sha512-a5BH9jIu00opGAmoKe9nHCbFRP7TfUZcgoKuRfR07jOQ9IGtXgUTcCdDwlsigUH1QF9a9eDai8lgxvlOG9yGdA==}
@@ -4492,6 +4504,25 @@ snapshots:
       - react
       - react-dom
 
+  '@open-pioneer/basemap-switcher@0.11.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(typescript@5.9.2)':
+    dependencies:
+      '@chakra-ui/react': 3.26.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@conterra/reactivity-core': 0.7.0
+      '@open-pioneer/chakra-snippets': 4.0.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(typescript@5.9.2)
+      '@open-pioneer/map': 0.11.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(typescript@5.9.2)
+      '@open-pioneer/react-utils': 4.0.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))
+      '@open-pioneer/reactivity': 4.0.0
+      '@open-pioneer/runtime': 4.0.0(@types/react@19.1.12)(typescript@5.9.2)
+      ol: 10.6.1
+      react: 19.1.1
+      react-icons: 5.5.0(react@19.1.1)
+    transitivePeerDependencies:
+      - '@emotion/react'
+      - '@types/react'
+      - react-dom
+      - supports-color
+      - typescript
+
   '@open-pioneer/build-common@3.1.0':
     dependencies:
       semver: 7.7.2
@@ -4718,6 +4749,27 @@ snapshots:
       - '@emotion/react'
       - '@types/react'
       - next-themes
+      - react-dom
+      - supports-color
+      - typescript
+
+  '@open-pioneer/toc@0.11.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(typescript@5.9.2)':
+    dependencies:
+      '@chakra-ui/react': 3.26.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@conterra/reactivity-core': 0.7.0
+      '@open-pioneer/basemap-switcher': 0.11.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(typescript@5.9.2)
+      '@open-pioneer/chakra-snippets': 4.0.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(typescript@5.9.2)
+      '@open-pioneer/map': 0.11.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(typescript@5.9.2)
+      '@open-pioneer/react-utils': 4.0.0(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(react-dom@19.1.1(react@19.1.1))
+      '@open-pioneer/reactivity': 4.0.0
+      '@open-pioneer/runtime': 4.0.0(@types/react@19.1.12)(typescript@5.9.2)
+      classnames: 2.5.1
+      ol: 10.6.1
+      react: 19.1.1
+      react-icons: 5.5.0(react@19.1.1)
+    transitivePeerDependencies:
+      - '@emotion/react'
+      - '@types/react'
       - react-dom
       - supports-color
       - typescript

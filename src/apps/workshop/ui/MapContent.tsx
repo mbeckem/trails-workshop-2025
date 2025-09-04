@@ -1,9 +1,10 @@
 import { Flex } from "@chakra-ui/react";
 import { MapAnchor, MapContainer, MapModel } from "@open-pioneer/map";
-import { ZoomIn, ZoomOut } from "@open-pioneer/map-navigation";
+import { InitialExtent, ZoomIn, ZoomOut } from "@open-pioneer/map-navigation";
 import { ToolButton } from "@open-pioneer/map-ui-components";
 import { useReactiveSnapshot } from "@open-pioneer/reactivity";
 import { ScaleBar } from "@open-pioneer/scale-bar";
+import { Toc } from "@open-pioneer/toc";
 import { useIntl, useService } from "open-pioneer:react-hooks";
 import { LuAtom } from "react-icons/lu";
 import { AppModel } from "../AppModel";
@@ -33,7 +34,9 @@ export function MapContent() {
                 })}
             >
                 <MapAnchor position="top-right" horizontalGap={5} verticalGap={5}>
-                    <CollapseWidget>Hier könnte Ihr Inhalt stehen!</CollapseWidget>
+                    <CollapseWidget>
+                        <Toc /> {/* Aufgabe 1b*/}
+                    </CollapseWidget>
                 </MapAnchor>
                 <MapAnchor position="bottom-right" horizontalGap={5} verticalGap={25}>
                     <Flex
@@ -46,6 +49,7 @@ export function MapContent() {
                     >
                         <ZoomIn />
                         <ZoomOut />
+                        <InitialExtent /> {/* Aufgabe 1a*/}
                         <ToolButton
                             label={intl.formatMessage({ id: "map.printMapInfoLabel" })}
                             icon={<LuAtom />}

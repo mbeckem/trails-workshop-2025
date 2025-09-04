@@ -17,6 +17,7 @@
         "@open-pioneer/scale-bar": "catalog:",
         "@open-pioneer/scale-viewer": "catalog:",
         "@open-pioneer/search": "catalog:",
+        "@open-pioneer/toc": "catalog:",
         "ol": "catalog:",
         "react-icons": "catalog:",
         "react": "catalog:"
