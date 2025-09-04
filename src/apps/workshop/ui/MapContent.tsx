@@ -1,7 +1,8 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text, VStack } from "@chakra-ui/react";
 import { MapAnchor, MapContainer, MapModel } from "@open-pioneer/map";
 import { InitialExtent, ZoomIn, ZoomOut } from "@open-pioneer/map-navigation";
 import { ToolButton } from "@open-pioneer/map-ui-components";
+import { NotificationService } from "@open-pioneer/notifier";
 import { useReactiveSnapshot } from "@open-pioneer/reactivity";
 import { ScaleBar } from "@open-pioneer/scale-bar";
 import { Toc } from "@open-pioneer/toc";
@@ -13,6 +14,7 @@ import { CollapseWidget } from "./CollapseTool";
 export function MapContent() {
     const intl = useIntl();
     const appModel = useService<AppModel>("workshop.AppModel");
+    const notifier = useService<NotificationService>("notifier.NotificationService"); // Aufgabe 2
     const map = useReactiveSnapshot(() => appModel.map, [appModel])!;
 
     return (
@@ -53,7 +55,7 @@ export function MapContent() {
                         <ToolButton
                             label={intl.formatMessage({ id: "map.printMapInfoLabel" })}
                             icon={<LuAtom />}
-                            onClick={() => printMapInfo(map)}
+                            onClick={() => printMapInfo(map, notifier)}
                         />
                     </Flex>
                 </MapAnchor>
@@ -65,13 +67,24 @@ export function MapContent() {
     );
 }
 
-function printMapInfo(map: MapModel) {
-    const coords = map.center?.toString() || "N/A";
+function printMapInfo(map: MapModel, notifier: NotificationService) {
+    const coords = map.center;
     const projection = map.projection.getCode();
     const scale = map.scale != null ? `1:${map.scale}` : "N/A";
-    console.log(
-        `Current coordinates: ${coords}\n` +
-            `Current projection: ${projection}\n` +
-            `Current scale: ${scale}`
+
+    // Aufgabe 2
+    const message = (
+        <VStack align="left" gap={0}>
+            <Text>Projektion: {projection}</Text>
+            <Text>
+                Koordinaten: {coords ? coords.map((c) => c.toFixed(2)).join(", ") : "N / A"}
+            </Text>
+            <Text>Maßstab: {scale}</Text>
+        </VStack>
     );
+
+    notifier.info({
+        title: "Kartenzustand",
+        message: message
+    });
 }

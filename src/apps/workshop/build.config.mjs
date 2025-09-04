@@ -17,6 +17,6 @@ export default defineBuildConfig({
         }
     },
     ui: {
-        references: ["workshop.AppModel"]
+        references: ["workshop.AppModel", "notifier.NotificationService"]
     }
 });
