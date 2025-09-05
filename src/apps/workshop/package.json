@@ -20,6 +20,7 @@
         "@open-pioneer/toc": "catalog:",
         "ol": "catalog:",
         "react-icons": "catalog:",
-        "react": "catalog:"
+        "react": "catalog:",
+        "map-info-component": "workspace:^"
     }
 }

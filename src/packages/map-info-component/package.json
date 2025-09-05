@@ -1,0 +1,12 @@
+{
+    "name": "map-info-component",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "react": "catalog:",
+        "@chakra-ui/react": "catalog:",
+        "@open-pioneer/build-support": "catalog:",
+        "@open-pioneer/map": "catalog:",
+        "@open-pioneer/react-utils": "catalog:"
+    }
+}

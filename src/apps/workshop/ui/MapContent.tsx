@@ -10,6 +10,7 @@ import { useIntl, useService } from "open-pioneer:react-hooks";
 import { LuAtom } from "react-icons/lu";
 import { AppModel } from "../AppModel";
 import { CollapseWidget } from "./CollapseTool";
+import { MapInfoComponent } from "map-info-component";
 
 export function MapContent() {
     const intl = useIntl();
@@ -38,6 +39,7 @@ export function MapContent() {
                 <MapAnchor position="top-right" horizontalGap={5} verticalGap={5}>
                     <CollapseWidget>
                         <Toc /> {/* Aufgabe 1b*/}
+                        <MapInfoComponent map={map} />
                     </CollapseWidget>
                 </MapAnchor>
                 <MapAnchor position="bottom-right" horizontalGap={5} verticalGap={25}>
